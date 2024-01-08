@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        fieldset {
+            font-weight: 600;
+        }
+    </style>
+    <script>
+        function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
+</head>
+
+<body>
+    <form id="form1">
+        <h1>User Registration Form</h1>
+        
+            <label for="first-name"> First Name:
+                <input type="text" id="first-name" name="first-name" required placeholder="First Name" minlength="3" maxlength="20">
+            </label>
+        <br><br>
+
+            <label for="last-name"> Last Name:
+                <input type="text" id="last-name" name="last-name" required placeholder="Last Name" minlength="3" maxlength="20">
+            </label>
+            <br><br>
+            <label for="password"> Password:
+                <input type="password" id="password" name="password" required placeholder="Password" minlength="8" maxlength="25"><br>
+                <input type="checkbox" onclick="myFunction()">Show Password
+            </label>
+            <br><br>
+        
+            Bio : <textarea cols="60" rows="5"></textarea>
+        <br><br>
+        <fieldset>
+            <legend>Gender:</legend>
+            <label for="male"> <input type="radio" name="Gender" id="male" required>Male</label>
+            <br>
+            <label for="female"><input type="radio" name="Gender" id="female" required>Female</label>
+            <br>
+            <label for="other"> <input type="radio" name="Gender" id="other" required>Other</label>
+        </fieldset>
+        <fieldset>
+            <legend>Interests:</legend>
+            <label for="sport"><input type="checkbox" id="sport">Sports</label>
+            <br>
+            <label for="reading"><input type="checkbox" id="reading">Reading</label>
+            <br>
+            <label for="coding"><input type="checkbox" id="coding">Coding</label>
+        </fieldset>
+<br>
+
+        <label> Country </label>    
+        <select name="select">
+            <option>Palestine</option>
+            <option>Turkey</option>
+            <option>Pakistan</option>
+            <option>China</option>
+            <option>France</option>
+            <option>London</option>
+            <option>Japan</option>
+            <option>United State</option>
+        </select>
+        <br><br>
+            <label for="color">Preferred Colors:</label>
+<input type="color" id="color" name="color">
+
+             
+        <br><br>
+        
+            Profile Picture: <input type="file">
+        <br><br>
+            Date Of Birth: <input type="date">
+        <br><br>
+            <label for="email">Email:
+                <input type="email" id="email" name="email" required>
+            </label>
+
+        <br><br>
+            <label for="website">Website:
+                <input type="url" id="website" name="website" required>
+            </label>
+        <br><br>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search">
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
